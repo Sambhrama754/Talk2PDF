@@ -1,42 +1,45 @@
-# 📄 Talk2PDF: A Smarter Way to Chat with Documents
+# 📄 Talk2PDF Pro: The Production-Grade Semantic Assistant
 
-Let’s be honest: Most RAG (Retrieval-Augmented Generation) apps feel a bit "broken" because they cut text into arbitrary chunks. This project is my attempt to fix that using Semantic Intelligence.
+Most "Chat with your PDF" apps are just local scripts that forget everything the moment you close the tab. **Talk2PDF Pro** is different. It’s built for 2026 standards: it’s persistent, private, and uses actual semantic intelligence to understand your documents.
 
-## Why is this different?
+## 🚀 What makes this "Pro"?
 
-Standard RAG apps are like using a paper shredder on a book and trying to glue it back together. **Talk2PDF** is different:
+I built this version to solve the three biggest headaches in RAG (Retrieval-Augmented Generation):
 
-* **It thinks before it splits:** It uses an embedding model to find actual "topic shifts." If you're talking about 'Revenue' in one paragraph and 'Risk' in the next, it knows to separate them.
-* **Speed:** Powered by Groq, the responses aren't just fast; they're nearly instant.
-* **Clean Code, Modern Stack:** No legacy spaghetti code. This uses the 2026 LCEL (LangChain Expression Language) standard. It’s modular, readable, and easy to tweak.
-* **Privacy First:** Your data stays local in a ChromaDB instance on your machine.
+1. **It has a Long-Term Memory:** This uses **Pinecone Cloud**. You can close the app, come back tomorrow, and your document's "brain" is still there.
+2. **It Respects Privacy:** Every user gets a unique, isolated "namespace."
+3. **It's Actually Smart (Semantic Chunking):** No more cutting sentences in half because of a character limit. It uses math to detect "topic shifts," ensuring the AI gets the full context of a thought before it tries to answer.
+4. **Lightning Speed:** Using **Groq's Llama 3.3 70B**, you get enterprise-level reasoning with near-zero latency.
 
-## The Stack
+## 🛠️ The Professional Stack
 
-* **The Engine:** Llama 3.3 70B (via Groq)
-* **The Sorter:** SemanticChunker (the "Topic Finder")
-* **The Memory:** ChromaDB (Local Vector Store)
-* **The UI:** Streamlit (Clean & Simple)
+* **Orchestration:** LangChain (2026 LCEL Modular Standard)
+* **The Model:** Llama 3.3 70B via Groq
+* **The DB:** Pinecone (Serverless Cloud Vector Store)
+* **The Logic:** SemanticChunker (Experimental)
+* **The UI:** Streamlit
 
-## Getting it Running
+## 🏁 Getting Started
 
-### 1. Prep the environment
-You'll need Python 3.10+. Grab a free API key from [Groq Cloud](https://console.groq.com) first.
+### 1. Prerequisites
+You’ll need Python 3.10+ and two free API keys:
+* [Groq Cloud Console](https://console.groq.com) (For the AI)
+* [Pinecone](https://www.pinecone.io/) (For the Memory)
 
+### 2. The Setup
 ```bash
-# Clone and jump in
-git clone [https://github.com/yourusername/Talk2PDF.git](https://github.com/yourusername/Talk2PDF.git)
-cd Talk2PDF
+# Clone the project
+git clone [https://github.com/yourusername/Talk2PDF-Pro.git](https://github.com/yourusername/Talk2PDF-Pro.git)
+cd Talk2PDF-Pro
 
-# Create your little sandbox
+# Build the environment
 python -m venv .venv
-source .venv/bin/activate # or .venv\Scripts\activate on Windows
+# Windows: .venv\Scripts\activate | Mac/Linux: source .venv/bin/activate
 
-# Install the essentials
-pip install streamlit pypdf2 langchain-huggingface langchain-chroma \
-langchain-groq langchain-experimental langchain-core sentence-transformers \
-python-dotenv
+# Install the 2026 Production Stack
+pip install streamlit pypdf2 langchain-huggingface langchain-pinecone \
+langchain-groq langchain-experimental langchain-core \
+sentence-transformers python-dotenv
 
 # Run the app!
 streamlit run app.py
-```
