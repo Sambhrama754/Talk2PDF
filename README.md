@@ -2,7 +2,7 @@
 
 Let’s be honest: Most RAG (Retrieval-Augmented Generation) apps feel a bit "broken" because they cut text into arbitrary chunks. This project is my attempt to fix that using Semantic Intelligence.
 
-## 🧐 Why is this different?
+## Why is this different?
 
 Standard RAG apps are like using a paper shredder on a book and trying to glue it back together. **Talk2PDF** is different:
 
@@ -11,14 +11,14 @@ Standard RAG apps are like using a paper shredder on a book and trying to glue i
 * **Clean Code, Modern Stack:** No legacy spaghetti code. This uses the 2026 LCEL (LangChain Expression Language) standard. It’s modular, readable, and easy to tweak.
 * **Privacy First:** Your data stays local in a ChromaDB instance on your machine.
 
-## 🛠️ The Gear
+## The Stack
 
 * **The Engine:** Llama 3.3 70B (via Groq)
 * **The Sorter:** SemanticChunker (the "Topic Finder")
 * **The Memory:** ChromaDB (Local Vector Store)
 * **The UI:** Streamlit (Clean & Simple)
 
-## 🚀 Getting it Running
+## Getting it Running
 
 ### 1. Prep the environment
 You'll need Python 3.10+. Grab a free API key from [Groq Cloud](https://console.groq.com) first.
